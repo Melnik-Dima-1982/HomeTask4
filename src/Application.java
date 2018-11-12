@@ -5,7 +5,7 @@ public class Application {
     public static void main(String[] args) {
 //        punktOne();
 //        punktSecond();
-        punktThird();
+//        punktThird();
 //        punktFourth();
 //        punktSixth(5);
 //        punktSeventh();
@@ -187,7 +187,6 @@ public class Application {
         }
     }
 
-
     public static void punktEighth() {
         System.out.print("Enter any integer number - ");
         Scanner scan = new Scanner(System.in);
@@ -204,5 +203,7 @@ public class Application {
             return sum;
         }
     }
+
+    public static void SAM (){}
 }
 
