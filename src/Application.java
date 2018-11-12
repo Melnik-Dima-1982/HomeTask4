@@ -40,32 +40,24 @@ public class Application {
         }
         averageFirstPart = averageFirstPart / (lastIndexFirstPart + 1);
         System.out.printf("Average of first part is " + "%.2f", averageFirstPart);
-//        System.out.println();
-//        System.out.println(averageFirstPart);
 
         for (int i = lastIndexFirstPart + 1; i < lastIndexSecondPart + 1; i++) {
             averageSecondPart += nums[i];
         }
         averageSecondPart /= (lastIndexFirstPart + 1);
         System.out.printf('\n' + "Average of second part is " + "%.2f", averageSecondPart);
-//        System.out.println();
-//        System.out.println(averageSecondPart);
 
         for (int i = lastIndexSecondPart + 1; i < lastIndexThirdPart + 1; i++) {
             averageThirdPart += nums[i];
         }
         averageThirdPart /= (lastIndexFirstPart + 1);
         System.out.printf('\n' + "Average of third part is " + "%.2f", averageThirdPart);
-//        System.out.println();
-//        System.out.println(averageThirdPart);
 
         for (int i = lastIndexThirdPart + 1; i < lastIndexFourthPart + 1; i++) {
             averageFourthPart += nums[i];
         }
         averageFourthPart /= (lastIndexFirstPart + 1);
         System.out.printf('\n' + "Average of fourth part is " + "%.2f", averageFourthPart);
-//        System.out.println();
-//        System.out.println(averageFourthPart);
 
         double[] averages = {averageFirstPart, averageSecondPart, averageThirdPart, averageFourthPart};
         int indexMaxAverage = 0;
@@ -75,7 +67,6 @@ public class Application {
             }
         }
         System.out.println();
-//        System.out.println("indexMaxAverage - " + indexMaxAverage);
         switch (indexMaxAverage) {
             case 0:
                 System.out.println("Max average in first quarter - " + averages[indexMaxAverage]);
@@ -90,8 +81,6 @@ public class Application {
                 System.out.println("Max average in fourth quarter - " + averages[indexMaxAverage]);
                 break;
         }
-
-
     }
 
     public static void punktThird() {
@@ -134,7 +123,6 @@ public class Application {
         } catch (ArrayIndexOutOfBoundsException ex) {
             System.out.println("Output beyond the massive length");
         }
-
     }
 
     //    punktFifth
@@ -204,6 +192,5 @@ public class Application {
         }
     }
 
-    public static void SAM (){}
 }
 
