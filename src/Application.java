@@ -1,17 +1,18 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class Application {
+
     public static void main(String[] args) {
 //        punktOne();
 //        punktSecond();
-//        punktThird();
+        punktThird();
 //        punktFourth();
 //        punktSixth(5);
 //        punktSeventh();
 //        punktEighth();
     }
-
 
     public static void punktOne() {
         double[] nums = new double[10];
@@ -85,7 +86,8 @@ public class Application {
 
     public static void punktThird() {
         int N = 5;
-        int T = 0;
+        int numCoincidences = 0;
+        ArrayList<Integer> listNums = new ArrayList();
         int[] massFirst = new int[(N + (int) (Math.random() * 3))];
         int[] massSecond = new int[(N + (int) (Math.random() * 21))];
         for (int i = 0; i < massFirst.length; i++) {
@@ -93,23 +95,25 @@ public class Application {
         }
         for (int i = 0; i < massSecond.length; i++) {
             massSecond[i] = (int) (Math.random() * 11);
+            listNums.add(massSecond[i]);
         }
         System.out.println("First massive -" + Arrays.toString(massFirst));
         System.out.println("Second massive -" + Arrays.toString(massSecond));
 
-        for (int j : massSecond) {
-            for (int r : massFirst) {
-                if (r == j) {
-                    T++;
+        for (int i : massFirst) {
+            if (numCoincidences == N) {
+                break;
+            }
+            for (int j = 0; j < listNums.size(); j++) {
+                if (i == listNums.get(j)) {
+                    numCoincidences++;
+                    listNums.remove(listNums.get(j));
                     break;
                 }
             }
-            if (T == N) {
-                break;
-            }
         }
 
-        if (T == N) {
+        if (numCoincidences == N) {
             System.out.println("Massives are equals");
         } else {
             System.out.println("Massives aren't equals");
